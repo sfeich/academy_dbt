@@ -2,7 +2,7 @@
 ## Exercises Repository
 
 [![Open in
-Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/jgrujic/academy_dbt.git)
+Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datamindedacademy/academy_dbt.git)
 
 This repository is hosting the exercises provided to students in the context of the `Relational DataBases` course of the Data Minded Academy.
 This specific excersise is focused on dbt.
@@ -13,12 +13,12 @@ Once it is started, run the script ./create_profiles.sh which will generate conn
 with Snowflake DataWarehouse. DBT is already installed there, so everything
 is ready for you first dbt projects.
 
-Enter the folder "audiance_measurment" explore the files in folders:
+Enter the folder "audience_measurement" explore the files in folders:
 - models
 - tests
 
 
-And file:
+Enter file:
 - dbt_profiles.yml
 
 Try running the following commands:
