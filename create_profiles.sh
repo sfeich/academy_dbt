@@ -26,7 +26,7 @@ echo "audience_measurement:
   outputs:
     dev:
       account: yw41113.eu-west-1
-      database: ACADEMY_DBT
+      database: WW_2023
       password: $password
       role: student
       schema: $schema
@@ -35,11 +35,11 @@ echo "audience_measurement:
       user: $user
       warehouse: COMPUTE_WH
   target: dev
-my_first_dbt_project:
+covid:
   outputs:
     dev:
       account: yw41113.eu-west-1
-      database: ACADEMY_DBT
+      database: WW_2023
       password: $password
       role: student
       schema: $schema
