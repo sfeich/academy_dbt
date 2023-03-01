@@ -26,7 +26,7 @@ echo "audience_measurement:
   outputs:
     dev:
       account: yw41113.eu-west-1
-      database: WW_2023
+      database: academy_dbt
       password: $password
       role: student
       schema: $schema
@@ -39,7 +39,7 @@ covid:
   outputs:
     dev:
       account: yw41113.eu-west-1
-      database: WW_2023
+      database: academy_dbt
       password: $password
       role: student
       schema: $schema
