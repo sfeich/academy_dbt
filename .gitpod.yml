@@ -3,4 +3,5 @@ image:
 checkoutLocation: '.'
 vscode:
   extensions:
+    - mtxr.sqltools-driver-pg
     - innoverio.vscode-dbt-power-user
