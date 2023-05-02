@@ -5,3 +5,5 @@ vscode:
   extensions:
     - mtxr.sqltools-driver-pg
     - innoverio.vscode-dbt-power-user
+    - ms-python.python
+    - mtxr.sqltools

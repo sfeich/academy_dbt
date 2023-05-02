@@ -1,4 +1,6 @@
-FROM gitpod/workspace-postgres:2023-04-20-16-32-37
+#FROM gitpod/workspace-postgres:2023-04-20-16-32-37
+FROM gitpod/workspace-postgres:2023-02-27-14-14-03
+
 
 # This env var is used to force the 
 # rebuild of the Gitpod environment when needed
