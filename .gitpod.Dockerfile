@@ -21,3 +21,6 @@ RUN apt-get update && \
 # COPY --chown=gitpod content/ /home/gitpod/dbt_audiance_measurment
 
 USER gitpod
+
+# Create empty .dbt directory otherwise dbt complains
+RUN mkdir /home/gitpod/.dbt
