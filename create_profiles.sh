@@ -18,6 +18,7 @@ echo "Username: $user"
 echo "Password: <not shown>"
 echo "Schema: $schema"
 read -p "Does this look correct? (y/n) " -n 1 -r
+echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
   echo "Aborting. Re-run the script to try again."
