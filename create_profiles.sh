@@ -1,14 +1,12 @@
 #!/bin/bash  
   
-# Read the user input     
-echo "Enter the username. The user name is your <firstname>"
-read user  
-schema=$user
-echo $user $schema
+# Read the username
+echo "Enter your username. The user name is eduvision_<your-firstname>"
+read user
 
 # Read the password, do not display it and display stars instead 
 unset $password
-prompt="Enter the password:"
+prompt="Enter your password:"
 while IFS= read -p "$prompt" -r -s -n 1 char
 do
     if [[ $char == $'\0' ]]
@@ -21,6 +19,21 @@ do
 done
 # End reading password
 
+# Read the schema to work in.
+echo "Enter the schema to work in. This is just <your-firstname>"
+read schema
+
+echo "Username: $user"
+echo "Password: <not shown>"
+echo "Schema: $schema"
+read -p "Does this look correct? (y/n) " -n 1 -r
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+  echo "Aborting. Re-run the script to try again."
+  [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # exit the script
+fi
+
+# Write the profiles.yml file
 mkdir /home/gitpod/.dbt/
 echo "testproject:
   outputs:
