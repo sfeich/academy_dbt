@@ -1,12 +1,12 @@
 #!/bin/bash  
   
 # Read the username
-echo "Enter your username. The user name is eduvision_<your-firstname>"
+echo "Enter your username (this starts with eduvision_): "
 read user
 
 # Read the password, do not display it and display stars instead 
 unset $password
-prompt="Enter your password:"
+prompt="Enter your password: "
 while IFS= read -p "$prompt" -r -s -n 1 char
 do
     if [[ $char == $'\0' ]]
@@ -20,7 +20,7 @@ done
 # End reading password
 
 # Read the schema to work in.
-echo "Enter the schema to work in. This is just <your-firstname>"
+echo "Enter the schema to work in (this is just your firstname): "
 read schema
 
 echo "Username: $user"
@@ -34,7 +34,7 @@ then
 fi
 
 # Write the profiles.yml file
-mkdir /home/gitpod/.dbt/
+mkdir -p /home/gitpod/.dbt/
 echo "testproject:
   outputs:
     dev:
