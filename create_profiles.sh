@@ -1,26 +1,17 @@
 #!/bin/bash  
   
 # Read the username
-echo "Enter your username (this starts with eduvision_): "
+echo -n "Enter your username (this starts with eduvision_): "
 read user
 
 # Read the password, do not display it and display stars instead 
 unset $password
-prompt="Enter your password: "
-while IFS= read -p "$prompt" -r -s -n 1 char
-do
-    if [[ $char == $'\0' ]]
-    then
-        printf "\n"
-        break
-    fi
-    prompt='*'
-    password+="$char"
-done
-# End reading password
+echo -n "Enter your password (nothing will be shown while you type): "
+read -s password
+echo
 
 # Read the schema to work in.
-echo "Enter the schema to work in (this is just your firstname): "
+echo -n "Enter the schema to work in (this is just your firstname): "
 read schema
 
 echo "Username: $user"
