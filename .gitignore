@@ -1,6 +1,10 @@
 target/
 dbt_packages/
 logs/
+.cargo/
+.gitpod/
+.pyenv_mirror/
+.vscode-remote/
 .idea
 *.zip
 /audience_measurement/logs/
