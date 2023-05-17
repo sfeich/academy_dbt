@@ -29,6 +29,16 @@ models:
   #        - not_null
 
 
+  - name: total_cases_per_municipality
+    description: "Table showing total cases per municipality (over entire period)"
+    columns:
+      - name: municipality
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+
 
 sources:
 - name: covid
