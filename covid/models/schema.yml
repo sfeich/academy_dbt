@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: cases_per_municipality
+    description: "Table showing cases per municipality"
+    columns:
+      - name: NIS5
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: covid_stats_per_municipality
+    description: "Table showing various covid stats per municipality"
+    columns:
+      - name: NIS5
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: vaccinations_per_municipality
+    description: "Table showing no. of vaccinations per municipality"
+    columns:
+      - name: NIS5
+        description: "The primary key for this table"
+        tests:
+          - unique
+  #        - not_null
+
+
+
+sources:
+- name: covid
+  database: eduvision_dbt
+  schema: public
+  tables:
+  - name: cases_muni
+  - name: cases_muni_cum
+  - name: population
+  - name: vacc_muni_cum
