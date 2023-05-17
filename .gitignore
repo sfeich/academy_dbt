@@ -1,6 +1,7 @@
 target/
 dbt_packages/
 logs/
+.docker-root/
 .cargo/
 .gitpod/
 .pyenv_mirror/
