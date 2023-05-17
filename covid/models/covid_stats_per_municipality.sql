@@ -11,7 +11,7 @@ population_stat as (
     joined.*,
     population.population
   from joined
-  left join public.population on population.refnis = joined.nis5
+  left join {{ source('covid', 'population') }} on population.refnis = joined.nis5
 ),
 final as (
   select

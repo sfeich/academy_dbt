@@ -5,7 +5,7 @@ with muni_vacc_with_dates as (
     *,
     LAST_DAY(TO_DATE(CONCAT('20', substring(year_week, 1, 2) ), 'YYYY'), week) AS last_day_of_first_week,
     DATEADD( week, substring(year_week, 4, 2) - 1 , last_day_of_first_week ) AS last_day_of_the_week
-  from public.vacc_muni_cum
+  from {{ source('covid', 'vacc_muni_cum') }}
 ),
 vaccinations as (
   select

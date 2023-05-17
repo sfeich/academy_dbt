@@ -4,7 +4,7 @@ with cases_with_year_week as (
   select
     *,
     CONCAT( SUBSTRING(to_varchar(date_part(year, date_of_case)), 3, 2), 'W', to_varchar(date_part(week, date_of_case))) as year_week
-  from public.cases_muni
+  from {{ source('covid', 'cases_muni') }}
 ),
 new_cases_next_eight_weeks as (
   select
