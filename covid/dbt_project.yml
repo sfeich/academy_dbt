@@ -38,3 +38,4 @@ models:
 
 vars:
   date: '2021-08-10'
+  cumul: 'true'
