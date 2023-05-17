@@ -11,6 +11,8 @@ This specific exercise is focused on dbt.
 
 To start click on "Open in Gitpod" button
 
+Add something random to README file.
+
 Once it is started, run the script ```./create_profiles.sh``` which will generate connection
 with Snowflake Data Warehouse. DBT is already installed there, so everything
 is ready for you first dbt projects.
